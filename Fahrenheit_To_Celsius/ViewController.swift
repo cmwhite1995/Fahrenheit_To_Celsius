@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+
     @IBOutlet weak var First_Label: UILabel!
     @IBOutlet weak var Input: UITextField!
     
