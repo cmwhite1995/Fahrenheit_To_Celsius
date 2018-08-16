@@ -9,11 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var First_Label: UILabel!
     @IBOutlet weak var Input: UITextField!
     
     @IBAction func Clear(_ sender: UIButton) {
-        Input.text = "";
+        let input:String = Input.text!;
+        var result = (Double(input)! * 1.8) + 32;
+        result.round();
+        Input.text = String(result);
     }
     
     @IBAction func Enter(_ sender: UIButton) {
@@ -26,9 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        First_Label.textColor = UIColor.red; // changes title coor to red
-        
-        Input.keyboardType = UIKeyboardType.numberPad //input only allows numbers
+        First_Label.textColor = UIColor.blue;
         
         
     }
