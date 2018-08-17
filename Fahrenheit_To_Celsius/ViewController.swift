@@ -16,21 +16,26 @@ class ViewController: UIViewController {
     
     
     @IBAction func Fahrenheit(_ sender: Any) {
-        let input:String = Input.text!;
-        var result = (Double(input)! * (9/5)) + 32;
-        result.round();
-        Input.text = String(result);
+        let input:String = (Input.text)!;
+        
+        if(input != ""){ 
+            var result = ((Double(input))! * (9/5)) + 32;
+            result.round();
+            Input.text = String(result);
+        }
     }
     
    
     
     
     @IBAction func Celsius(_ sender: Any) {
-        
         let input:String = Input.text!;
+        
+        if(input != ""){
         var result = (Double(input)! - 32) * (5/9);
         result.round();
         Input.text = String(result);
+        }
     }
     
  
