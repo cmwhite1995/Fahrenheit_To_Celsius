@@ -13,20 +13,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var First_Label: UILabel!
     @IBOutlet weak var Input: UITextField!
     
-    @IBAction func Clear(_ sender: UIButton) {
+    
+    
+    @IBAction func Fahrenheit(_ sender: Any) {
         let input:String = Input.text!;
-        var result = (Double(input)! * 1.8) + 32;
+        var result = (Double(input)! * (9/5)) + 32;
         result.round();
         Input.text = String(result);
     }
     
-    @IBAction func Enter(_ sender: UIButton) {
+   
+    
+    
+    @IBAction func Celsius(_ sender: Any) {
+        
         let input:String = Input.text!;
-        var result = ((Double(input)! - 32)/(1.8));
+        var result = (Double(input)! - 32) * (5/9);
         result.round();
         Input.text = String(result);
-        
     }
+    
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
