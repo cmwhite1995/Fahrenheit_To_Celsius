@@ -10,12 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var First_Label: UILabel!
-    @IBOutlet weak var Input: UITextField!
+    @IBOutlet weak var First_Label: UILabel! //Title
+    @IBOutlet weak var Input: UITextField!   // Input from user
     
-    
-    
-    @IBAction func Fahrenheit(_ sender: Any) {
+    @IBAction func Fahrenheit(_ sender: Any) {  //converts celsius to Fahrenheit
         let input:String = (Input.text)!;
         
         if(input != ""){ 
@@ -25,10 +23,7 @@ class ViewController: UIViewController {
         }
     }
     
-   
-    
-    
-    @IBAction func Celsius(_ sender: Any) {
+    @IBAction func Celsius(_ sender: Any) { //Converts Fahrenheit to celsius
         let input:String = Input.text!;
         
         if(input != ""){
@@ -38,13 +33,9 @@ class ViewController: UIViewController {
         }
     }
     
- 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        First_Label.textColor = UIColor.blue;
-        
-        
+       Input.keyboardType = UIKeyboardType.numberPad  //input textfield uses only numbers from numberpad
     }
 
     override func didReceiveMemoryWarning() {
